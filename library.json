@@ -1,5 +1,5 @@
 {
-  "name": "Button",
+  "name": "SimpleButton",
   "version": "1.0.0",
   "description": "Simple button library for Arduino that enables easy push button handling",
   "keywords": "button, push button, library",
