@@ -1,0 +1,22 @@
+{
+  "name": "Button",
+  "version": "1.0.0",
+  "description": "Simple button library for Arduino that enables easy push button handling",
+  "keywords": "button, push button, library",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/nathab32/Button-Library"
+  },
+  "authors":
+  [
+    {
+      "name": "Nathan Chiu",
+      "url": "https://github.com/nathab32",
+      "maintainer": true
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "frameworks": "arduino",
+  "platforms": "atmelavr"
+}
