@@ -1,6 +1,6 @@
 {
   "name": "SimpleButton",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple button library for Arduino that enables easy push button handling",
   "keywords": "button, push button, library",
   "repository":
