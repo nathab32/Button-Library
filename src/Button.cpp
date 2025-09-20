@@ -48,16 +48,24 @@ void Button::handle() {
             pressTime = time;
 
         } else { //LOW to HIGH state
-            //only do something if time is lower than hold, otherwise nothing
+            //only do something if time is lower than hold, otherwise reset the hold function
             if ((time - pressTime) < holdTime) {
                 pFunction();
+            } else {
+                holdTriggered = false;
             }
         }
     }
 
     //trigger hold function when held for longer than hold time
     if ((state == LOW) && (time - pressTime >= holdTime)) {
-        hFunction();
+        if (!holdTriggered){
+            holdTriggered = true;
+            hFunction();
+        } else {
+            return;
+        }
+        
     }
 
     

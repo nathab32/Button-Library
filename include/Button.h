@@ -26,6 +26,7 @@ class Button {
         bool previousState = HIGH;
         unsigned long pressTime = 0;
         unsigned long previousTime = 0;
+        bool holdTriggered = false;
 };
 
 #endif // BUTTON_H
