@@ -1,9 +1,9 @@
 /* 
         Button library example
 3 push buttons connected from digital pins
-2, 4, and 7. Pushing each button will increment
-the counter variable by a different amount. Holding
-each button will reset the counter to 0.
+2, 4, and 7. Pushing each button will add to the 
+counter by 1, 2, and 3, respectively. Holding
+each button will subtract instead of add.
 
 */
 
@@ -16,20 +16,28 @@ Button button3(7, 50, 1500);
 
 int counter = 0;
 
-void one() {
+void onePress() {
   counter++;
 }
 
-void two() {
+void twoPress() {
   counter += 2;
 }
 
-void three() {
+void threePress() {
   counter += 3;
 }
 
-void reset() {
-  counter = 0;
+void oneHold() {
+  counter--;
+}
+
+void twoHold() {
+  counter -= 2;
+}
+
+void threeHold() {
+  counter -= 3;
 }
 
 void setup() {
@@ -38,14 +46,14 @@ void setup() {
     button1.setDebounceTime(50);
     button1.setHoldTime(1500);
 
-    button1.pressFunction(one);
-    button1.holdFunction(reset);
+    button1.pressFunction(onePress);
+    button1.holdFunction(oneHold);
     
-    button2.pressFunction(two);
-    button2.holdFunction(reset);
+    button2.pressFunction(twoPress);
+    button2.holdFunction(twoHold);
     
-    button3.pressFunction(three);
-    button3.holdFunction(reset);
+    button3.pressFunction(threePress);
+    button3.holdFunction(threeHold);
 }
 
 void loop() {
